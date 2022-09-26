@@ -1,0 +1,6 @@
+// This configuration prevents TSC from building Jest test files into the ./dist folder
+// Based on tip from: https://swizec.com/blog/how-to-configure-jest-with-typescript/
+{
+  "extends": "./tsconfig",
+  "exclude": ["**/*.test.*", "**/*.spec.*", "**/__mocks__/*", "**/__tests__/*"]
+}

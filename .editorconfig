@@ -1,0 +1,30 @@
+# Docs: https://editorconfig.org/
+# Examples: https://github.com/editorconfig/editorconfig/wiki/Projects-Using-EditorConfig
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+max_line_length = 100
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.{md,markdown}]
+indent_size = 1
+max_line_length = 0
+trim_trailing_whitespace = false
+
+[*.{sh,msx}]
+max_line_length = 140
+
+[*.{yml,yaml}]
+max_line_length = 140
+
+[*.{xsd,xml}]
+indent_size = 4
+
+[*.diff]
+trim_trailing_whitespace = false

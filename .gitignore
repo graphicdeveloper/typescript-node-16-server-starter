@@ -1,0 +1,48 @@
+# WebStorm
+.idea/
+
+# Dependencies
+node_modules/
+
+# Project
+dist/
+
+# dotenv
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# Misc
+.DS_Store
+
+### From: https://github.com/github/gitignore/blob/main/Node.gitignore ###
+
+# Logs
+logs
+*.log
+npm-debug.log*
+.pnpm-debug.log*
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
