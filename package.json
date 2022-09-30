@@ -12,14 +12,21 @@
     "dev:tpo": "ts-node-dev --transpile-only --respawn ./src/index.ts",
     "dev:nm": "nodemon --watch './src/**/*.ts' --exec 'ts-node' ./src/index.ts",
     "build": "npm run clean && npm run format && npm run lint && npx tsc -p ./tsconfig.build.json",
-    "build:maps": "npm run build -- -sourceMap true",
+    "build:maps": "npm run build -- -inlineSourceMap true",
     "build:watch": "npm run build -- -w",
     "build:start": "npm run build && npm start",
+    "build:debug": "npm run build:maps && npm run start:debug",
+    "build:faststart": "npm run clean && npx tsc -p ./tsconfig.build.json && npm start",
     "test": "jest",
     "test:v": "jest --verbose",
     "test:watch": "jest --watchAll",
     "test:vwatch": "jest --verbose --watchAll",
-    "start": "node ./dist/index.js"
+    "start": "NODE_ENV=production node ./dist/index.js",
+    "start:debug": "NODE_ENV=development node --inspect ./dist/index.js"
+  },
+  "engines": {
+    "node": "^16.17.0",
+    "npm": "^8.15.0"
   },
   "keywords": [],
   "author": "David Baldeschwieler",
